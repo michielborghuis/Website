@@ -101,4 +101,3 @@ def algoritme_1():
 
 print(algoritme_1())
 
-#Dit is het eerste algoritme uit het onderzoek van een student uit Groningen

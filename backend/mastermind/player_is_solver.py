@@ -84,3 +84,5 @@ def play(all_pos):
 
 def main():
     play(all_possibilities())
+
+main()

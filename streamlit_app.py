@@ -34,13 +34,20 @@ math_files = [
     # "Sudoku_Solver.py",
 ]
 
+mastermind_files = [
+    "Mastermind_Play.py",
+    "Mastermind_Computer.py",
+]
+
 graphs_pages = [st.Page(**make_page(f, "backend/graphs")) for f in graph_files]
 math_pages = [st.Page(**make_page(f, "backend/math")) for f in math_files]
+mastermind_pages = [st.Page(**make_page(f, "backend/mastermind")) for f in mastermind_files]
 
 pg = st.navigation(
     {
         "Graphs": graphs_pages,
         "Math": math_pages,
+        "Mastermind": mastermind_pages,
     }
 )
 
