@@ -1,0 +1,9 @@
+streamlit
+matplotlib
+numpy
+pandas
+scipy
+geopy
+pygame
+qrcode
+tsp-solver2
