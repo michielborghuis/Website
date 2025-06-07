@@ -37,6 +37,7 @@ def sternsequenceplot(r):
 
 
 st.title("Stern Sequence Plot Generator")
+st.markdown('[Inspiration video](https://youtu.be/j0o-pMIR8uk?si=VG2_l-ZexYxWJtEA&t=1)')
 n = st.number_input("Give the range (12 recommended):", min_value=1, value=12, step=1)
 fig = sternsequenceplot(int(n))
 st.pyplot(fig)

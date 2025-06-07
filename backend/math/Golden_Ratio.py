@@ -13,7 +13,7 @@ def goldenratio(n):
 
 
 st.title("Golden Ratio Calculator")
-
+st.markdown('[Inspiration video](https://youtu.be/cjx23aMeBkQ?si=urCjoGa2bJAQJg_r)')
 n = st.number_input("How many terms of the Fibonacci sequence?", min_value=2, value=10)
 ratios = goldenratio(n)
 

@@ -17,6 +17,7 @@ def hofstadterssequence(r):
 
 
 st.title("Hofstadter's Q Sequence Plot Generator")
+st.markdown('[Inspiration video](https://youtu.be/j0o-pMIR8uk?si=2SOyRDVcVZecHzVQ&t=116)')
 n = st.number_input("Give the range (5000 recommended):", min_value=1, value=5000, step=100)
 fig = hofstadterssequence(int(n))
 st.pyplot(fig)

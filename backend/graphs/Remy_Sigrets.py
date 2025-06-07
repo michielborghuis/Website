@@ -58,6 +58,7 @@ def remy(r, base):
     return fig
 
 st.title("Balanced Base Plot Generator")
+st.markdown('[Inspiration video](https://youtu.be/j0o-pMIR8uk?si=6zAn9bjI6rrgJy90&t=371)')
 n = st.number_input("Give the range (700 recommended):", min_value=1, value=700, step=100)
 base = st.number_input("Give the base between 2 and 10 (2 recommended):", min_value=2, max_value=10, value=2, step=1)
 fig = remy(int(n), int(base))

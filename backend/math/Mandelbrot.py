@@ -27,7 +27,7 @@ def formule(x, y, a, b):
     return manx, many
 
 st.title("Mandelbrot Set")
-
+st.markdown('[Inspiration video](httphttps://youtu.be/FFftmWSzgmk?si=wt79Vz88z-4TCA03)')
 size = st.slider("Image size (pixels)", 100, 1000, 400)
 repeats = st.slider("Max iterations", 1, 300, 100)
 

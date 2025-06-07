@@ -29,11 +29,12 @@ def verse_base_plot(base):
             lsty.append(i - decreversed)
     fig, ax = plt.subplots()
     ax.plot(lstx, lsty, 'ko', markersize=1)
-    ax.set_title("Verse Base Plot")
+    ax.set_title("Reversed Base Plot")
     return fig
 
 
-st.title("Verse Base Plot Generator")
+st.title("Reversed Base Plot Generator")
+st.markdown('[Inspiration video](tps://youtu.be/pAMgUB51XZA?si=nEqy5SZa8g-7jITC&t=472)')
 base = st.number_input("Give base between 2 and 10:", min_value=2, max_value=10, value=2, step=1)
 fig = verse_base_plot(int(base))
 st.pyplot(fig)

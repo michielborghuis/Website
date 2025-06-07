@@ -8,19 +8,19 @@ def make_page(filename, folder):
     }
 
 graph_files = [
-    "Balanced_Base.py",
-    "Chaotic_Cousin.py",
     "Fly_Straight_Dammit.py",
     "Forestfire_Animation.py",
     "Forest_Fire.py",
-    "Hofstaders.py",
+    "Hofstadters_Chaotic_Cousin.py",
+    "Hofstadters_Q_Sequence.py",
     "Random_Fibonacci.py",
     "Remy_Sigrets.py",
+    "Reversed_Base.py",
     "Reversed_Primes.py",
     "Square_Root_Rounded.py",
+    "Star_Wars.py",
     "Stern_Sequence.py",
     "Triangles.py",
-    "Verse_Base.py",
     "Wisteria.py",
 ]
 

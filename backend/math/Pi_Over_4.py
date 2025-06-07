@@ -46,6 +46,7 @@ def twooverpi(int_range):
     return pi
 
 st.title("Pi Approximations")
+st.markdown('[Inspiration video](https://youtu.be/d-o3eB9sfls?si=er-zWD0ziTSug31F)')
 n = st.number_input("Enter range:", min_value=2, value=1000, step=1)
 
 if st.button("Calculate"):

@@ -42,11 +42,12 @@ def balanced_base_plot(r, base):
             lsty.append(base2decimal(str(ter), base))
     fig, ax = plt.subplots()
     ax.plot(lstx, lsty, 'ko', markersize=1)
-    ax.set_title("Balanced Base Plot")
+    ax.set_title("Star Wars Plot")
     return fig
 
 
-st.title("Balanced Base Plot Generator")
+st.title("Star Wars Plot Generator")
+st.markdown('[Inspiration video](https://youtu.be/o8c4uYnnNnc?si=ge3g5S43CQ6eI0fY&t=91)')
 n = st.number_input("Give the range (> 1000 recommended):", min_value=1, value=1000, step=100)
 base = st.number_input("Base (2 or 3 recommended):", min_value=2, value=3, step=1)
 fig = balanced_base_plot(int(n), int(base))

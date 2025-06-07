@@ -29,6 +29,7 @@ def reverseprime(r):
     return fig
 
 st.title("Reversed Primes Plot Generator")
+st.markdown('[Inspiration video](https://youtu.be/pAMgUB51XZA?si=nEqy5SZa8g-7jITC&t=472)')
 n = st.number_input("Give the range (> 1000 recommended):", min_value=1, value=1000, step=100)
 fig = reverseprime(int(n))
 st.pyplot(fig)

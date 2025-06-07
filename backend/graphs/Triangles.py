@@ -35,6 +35,7 @@ class Triangles:
 
 
 st.title("Triangles Plot Generator")
+st.markdown('[Inspiration video](https://youtu.be/kbKtFN71Lfs?si=1dXFjRHjNrvLCqt_)')
 n = st.number_input("Give amount of points (> 1000 recommended):", min_value=1, value=1000, step=100)
 t = Triangles(int(n))
 fig = t.triangles()
