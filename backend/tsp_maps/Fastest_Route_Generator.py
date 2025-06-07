@@ -6,12 +6,12 @@ import time
 
 start = time.time()
 
-app = Nominatim(user_agent="Intertoys")
+app = Nominatim(user_agent="RouteGenerator")
 addresses = [
 'Elsenerstraat 31 Rijssen',
 'Plaagslagen 8 Rijssen',
 'Aalscholver 40 Rijssen',
-'ooievaarstraat 23 Rijssen',
+'Ooievaarstraat 23 Rijssen',
 'Markeloseweg 11 Rijssen',
 'Schoolstraat 30 Rijssen',
 'Paardebloem 18 Rijssen',
@@ -22,16 +22,16 @@ addresses = [
 'Dennenlaan 47 Rijssen',
 'Molendijk noord 80 Rijssen',
 'Veldovenstraat 13 Rijssen',
-'De stroekeld 116 Rijssen',
+'De Stroekeld 116 Rijssen',
 'Zuiderstraat 64 Rijssen',
-'Petersweg 6 markelo',
+'Petersweg 6 Markelo',
 'Veldovenstraat 13 Rijssen',
-'Potdijk 8b markelo',
+'Potdijk 8b Markelo',
 'Grotestraat 33 Markelo',
-'Molenbelterweg 18 holten',
+'Molenbelterweg 18 Holten',
 'Dannenberg 53 Rijssen',
 'Gracht 40 Rijssen',
-'esstraat 161a rijssen'
+'Esstraat 161a Rijssen'
     ]
 url = 'www.google.nl/maps/dir/'
 
@@ -51,6 +51,16 @@ def url_piece(address_raw):
 
     [url_pieces.append(i) for i in l[start + 1].split(' ')]
     url_pieces.append(l[start])
+    with open('plaatsnamen_cleaned.txt', 'r', encoding='utf-8') as f:
+        plaatsnamen = f.read().splitlines()
+    if l[start + 2] in plaatsnamen:
+        url_pieces.append(l[start + 2])
+    elif l[start + 3] in plaatsnamen:
+        url_pieces.append(l[start + 3])
+    elif l[start + 4] in plaatsnamen:
+        url_pieces.append(l[start + 4])
+    elif l[start + 5] in plaatsnamen:
+        url_pieces.append(l[start + 5])
 
     for i in url_pieces:
         url += i + '+'

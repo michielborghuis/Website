@@ -42,19 +42,25 @@ mastermind_files = [
 qrcode_files = [
     "QRCode_Maker.py",
 ]
+route_files = [
+    # "Fastest_Route_Generator.py",
+    "Route_Generator.py",
+]
 
 graphs_pages = [st.Page(**make_page(f, "backend/graphs")) for f in graph_files]
 math_pages = [st.Page(**make_page(f, "backend/math")) for f in math_files]
 mastermind_pages = [st.Page(**make_page(f, "backend/mastermind")) for f in mastermind_files]
 qrcode_pages = [st.Page(**make_page(f, "backend/qrcode")) for f in qrcode_files]
+route_pages = [st.Page(**make_page(f, "backend/tsp_maps")) for f in route_files]
 
 
 pg = st.navigation(
     {
-        "Graphs": graphs_pages,
-        "Math": math_pages,
         "Mastermind": mastermind_pages,
         "QR Code": qrcode_pages,
+        "Route": route_pages,
+        "Graphs": graphs_pages,
+        "Math": math_pages,
     }
 )
 
