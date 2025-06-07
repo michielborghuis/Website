@@ -9,7 +9,7 @@ def make_page(filename, folder):
 
 graph_files = [
     "Fly_Straight_Dammit.py",
-    "Forestfire_Animation.py",
+    # "Forestfire_Animation.py",
     "Forest_Fire.py",
     "Hofstadters_Chaotic_Cousin.py",
     "Hofstadters_Q_Sequence.py",
@@ -39,15 +39,22 @@ mastermind_files = [
     "Mastermind_Computer.py",
 ]
 
+qrcode_files = [
+    "QRCode_Maker.py",
+]
+
 graphs_pages = [st.Page(**make_page(f, "backend/graphs")) for f in graph_files]
 math_pages = [st.Page(**make_page(f, "backend/math")) for f in math_files]
 mastermind_pages = [st.Page(**make_page(f, "backend/mastermind")) for f in mastermind_files]
+qrcode_pages = [st.Page(**make_page(f, "backend/qrcode")) for f in qrcode_files]
+
 
 pg = st.navigation(
     {
         "Graphs": graphs_pages,
         "Math": math_pages,
         "Mastermind": mastermind_pages,
+        "QR Code": qrcode_pages,
     }
 )
 

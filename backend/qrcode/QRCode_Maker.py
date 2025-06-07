@@ -1,3 +1,4 @@
+import streamlit as st
 import qrcode
 
 
@@ -20,12 +21,16 @@ class QRCode:
         img.save("advanced.png")
 
 
-def main():
-    l = input("Give url for QR-code: ")
-    c = input("Give foreground color for QR-code: ")
-    b = input("Give background color for QR-code: ")
-    q = QRCode(l, c, b)
-    q.qrcode()
 
-if __name__ == "__main__":
-    main()
+st.title("QR Code Maker")
+
+st.write("Generate a custom QR code by entering your link and choosing colors.")
+
+link = st.text_input("URL for QR-code", "https://example.com")
+color = st.color_picker("Foreground color", "#000000")
+backcolor = st.color_picker("Background color", "#ffffff")
+
+if st.button("Generate QR Code"):
+    qr = QRCode(link, color, backcolor)
+    qr.qrcode()
+    st.image("advanced.png", caption="Your QR Code", width=400)
